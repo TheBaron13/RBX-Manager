@@ -3,39 +3,50 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rockbox-manager"
+name = "rockbox-db-manager"
 version = "1.0.0"
-description = "A GUI application for managing Rockbox installations"
+description = "A CLI tool for managing Rockbox database files"
 readme = "README.md"
 requires-python = ">=3.7"
-license = {text = "MIT"}
+license = {file = "LICENSE"}
 authors = [
-    {name = "Original Author", email = "email@example.com"}
+    {name = "widemic"}
 ]
 dependencies = [
-    "PyQt5>=5.15.0",
-    "requests>=2.25.0",
+    # Check requirements.txt for the actual dependencies
 ]
 
 [project.urls]
 Homepage = "https://github.com/YOUR-USERNAME/rockboxManager"
+Repository = "https://github.com/YOUR-USERNAME/rockboxManager"
 
 [project.scripts]
-rockbox-manager = "rockboxManager.main:main"
+rockbox-db-manager = "rockbox_db_manager.cli:main"
 ```
 
-### Restructure the Code
+## Important: Check `requirements.txt`
 
-The current structure likely needs adjustment. You should:
+Look at the `requirements.txt` file in the repository to see what dependencies are needed, then add them to the `dependencies` list in `pyproject.toml`.
 
-1. Create a proper package structure:
+## File Structure Should Be:
 ```
 rockboxManager/
 ├── pyproject.toml
 ├── README.md
 ├── LICENSE
-└── src/
-    └── rockboxManager/
-        ├── __init__.py
-        ├── main.py
-        └── (other .py files)
+├── rockbox_db_manager/
+│   ├── __init__.py
+│   ├── cli.py
+│   ├── analyzer.py
+│   ├── cache.py
+│   ├── comparator.py
+│   ├── config.py
+│   ├── database.py
+│   ├── metadata.py
+│   ├── read_binary.py
+│   ├── scanner.py
+│   └── sync.py
+├── db/
+│   └── database.ignore
+└── tests/
+    └── (test files)
