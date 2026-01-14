@@ -13,12 +13,12 @@ authors = [
     {name = "widemic"}
 ]
 dependencies = [
-    "mutagen"
+    "mutagen",
     "tqdm"
 ]
 
 [project.urls]
-Homepage = "https://github.com/TheBaron13/rockboxManager"
+Homepage = "https://github.com/TheBaron13/RBX-Manager"
 
 [project.scripts]
 rbx-m = "rockbox_db_manager.cli:main"
