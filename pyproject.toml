@@ -12,7 +12,10 @@ license = {file = "LICENSE"}
 authors = [
     {name = "widemic"}
 ]
-dependencies = []
+dependencies = [
+    "mutagen"
+    "tqdm"
+]
 
 [project.urls]
 Homepage = "https://github.com/TheBaron13/rockboxManager"
