@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rockbox-manager"
+version = "1.0.0"
+description = "A GUI application for managing Rockbox installations"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Original Author", email = "email@example.com"}
+]
+dependencies = [
+    "PyQt5>=5.15.0",
+    "requests>=2.25.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/YOUR-USERNAME/rockboxManager"
+
+[project.scripts]
+rockbox-manager = "rockboxManager.main:main"
+```
+
+### Restructure the Code
+
+The current structure likely needs adjustment. You should:
+
+1. Create a proper package structure:
+```
+rockboxManager/
+├── pyproject.toml
+├── README.md
+├── LICENSE
+└── src/
+    └── rockboxManager/
+        ├── __init__.py
+        ├── main.py
+        └── (other .py files)
