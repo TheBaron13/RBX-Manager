@@ -12,41 +12,10 @@ license = {file = "LICENSE"}
 authors = [
     {name = "widemic"}
 ]
-dependencies = [
-    # Check requirements.txt for the actual dependencies
-]
+dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/YOUR-USERNAME/rockboxManager"
-Repository = "https://github.com/YOUR-USERNAME/rockboxManager"
+Homepage = "https://github.com/TheBaron13/rockboxManager"
 
 [project.scripts]
-rockbox-db-manager = "rockbox_db_manager.cli:main"
-```
-
-## Important: Check `requirements.txt`
-
-Look at the `requirements.txt` file in the repository to see what dependencies are needed, then add them to the `dependencies` list in `pyproject.toml`.
-
-## File Structure Should Be:
-```
-rockboxManager/
-├── pyproject.toml
-├── README.md
-├── LICENSE
-├── rockbox_db_manager/
-│   ├── __init__.py
-│   ├── cli.py
-│   ├── analyzer.py
-│   ├── cache.py
-│   ├── comparator.py
-│   ├── config.py
-│   ├── database.py
-│   ├── metadata.py
-│   ├── read_binary.py
-│   ├── scanner.py
-│   └── sync.py
-├── db/
-│   └── database.ignore
-└── tests/
-    └── (test files)
+rbx-m = "rockbox_db_manager.cli:main"
